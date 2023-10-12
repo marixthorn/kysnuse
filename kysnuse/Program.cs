@@ -4,12 +4,13 @@ Console.WriteLine("---------------");
 
 string[] zeme = obsah_textaku.Split(new[] { "\n" }, StringSplitOptions.None);
 List<string> seznam_zemi = zeme.ToList();
-
+Console.ForegroundColor = ConsoleColor.Green;
 foreach (var jedna_zeme in seznam_zemi)
 {
     Console.WriteLine("--- Země ---");
     Console.WriteLine(jedna_zeme);
 }
+Console.ResetColor();
 Console.WriteLine("Chcete vygenerovat nahodnou zemi :3 Y/N?");
 string volba = Console.ReadLine();
 if (volba == "Y")
